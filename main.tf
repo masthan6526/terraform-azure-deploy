@@ -35,7 +35,9 @@ resource "azurerm_subnet" "private" {
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.2.0/24"]
 }
+
 /*
+
 # Public IP for NAT Gateway
 resource "azurerm_public_ip" "nat_ip" {
   name                = "nat-ip"
@@ -157,3 +159,5 @@ resource "azurerm_subnet_route_table_association" "private_rt_assoc" {
   subnet_id      = azurerm_subnet.private.id
   route_table_id = azurerm_route_table.private_rt.id
 }
+
+*/
