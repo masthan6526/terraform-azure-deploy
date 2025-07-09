@@ -24,6 +24,8 @@ jobs:
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
+    - name: Terraform Destroy
+      run:  terraform destroy 
 
     env:
       ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
